@@ -1,0 +1,39 @@
+#Python Proje 1
+#Bir listeyi düzleştiren (flatten) fonksiyon yazın.
+
+#Listemizi oluşturalım
+mylist = [["a"], ["b", 7, ["Q", 3]], 1, [["z"], ["o", 11]]]
+
+#Fonksiyon sonucuna göre yazılacak yeni liste için boş bir değişken atayalım
+flat_list = []
+
+#fonskiyonu tanımlayalım
+def flatten_list(mylist):
+    #listemi kontrol etsin
+    for element in mylist:
+        
+        if type(element) == list:
+            
+            flatten_list(element)
+        else:
+            flat_list.append(element)
+
+#yeni listemi oluştursun
+flatten_list(mylist)
+
+#yeni listemi yazdırsın
+print(flat_list)
+
+
+
+#Python Proje 2
+#Verilen listenin içindeki elemanları tersine döndüren bir fonksiyon yazın.
+
+#Listemi aldım
+mylist = [["a"], ["b", 7, ["Q", 3]], 1, [["z"], ["o", 11]]]
+
+#Terse döndüren fonksiyonu girelim
+mylist.reverse()
+
+#Sonuçları yazdıralım
+print(mylist)
